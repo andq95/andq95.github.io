@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: "Loading... (But Probably Taking a Nap)",
+  tagline: "Don't worry, the bugs are napping too.",
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -59,7 +59,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Loading...',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
