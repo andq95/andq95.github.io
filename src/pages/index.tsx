@@ -7,6 +7,8 @@ import Heading from "@theme/Heading";
 import ReactGA from "react-ga4";
 
 import styles from "./index.module.css";
+import HomepageIntro from "../components/HomepageIntro";
+import HomepageExperience from "../components/HomepageExperience";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -36,12 +38,14 @@ export default function Home(): JSX.Element {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      title={`An Dang`}
+      description="A Backend Developer with lots of hobbies"
     >
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
       <main>
-        <HomepageFeatures />
+        <HomepageIntro></HomepageIntro>
+        {/* <HomepageFeatures /> */}
+        <HomepageExperience />
       </main>
     </Layout>
   );
