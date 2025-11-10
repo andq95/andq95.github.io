@@ -1,47 +1,74 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import React from "react";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
-import ReactGA from "react-ga4";
-
 import styles from "./index.module.css";
+import Link from "@docusaurus/Link";
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+export default function HomePage(): JSX.Element {
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro"
-          >
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+    <Layout title="Trang chủ" description="Portfolio & Blog của Đặng Quốc An">
+      <main className={styles.container}>
+        <section className={styles.hero}>
+          <div className={styles.heroText}>
+            <h1>
+              👋 Xin chào, tôi là <span>Đặng Quốc An</span>
+            </h1>
+            <p>
+              Lập trình viên <strong>Backend</strong> & nhà phát triển{" "}
+              <strong>Machine Learning</strong>, đam mê sáng tạo sản phẩm thông
+              minh và game phiêu lưu.
+            </p>
 
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  ReactGA.initialize("G-YS7V4J17HJ");
+            <div className={styles.buttons}>
+              <Link className={styles.btnPrimary} to="/cv">
+                Xem CV & Kỹ năng
+              </Link>
+              <Link className={styles.btnSecondary} to="/portfolio">
+                Xem Portfolio
+              </Link>
+            </div>
+          </div>
 
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+          <div className={styles.heroImage}>
+            <img
+              src="https://avatars.githubusercontent.com/u/40834431?v=4"
+              alt="Quốc An Avatar"
+            />
+          </div>
+        </section>
+
+        <section className={styles.about}>
+          <h2>💡 Về tôi</h2>
+          <p>
+            Tôi yêu thích công nghệ, đặc biệt là <b>AI</b> và{" "}
+            <b>Game Development</b>. Tôi thường thử nghiệm các mô hình học máy,
+            huấn luyện mô hình dự đoán dữ liệu thực tế như Vietlott, đồng thời
+            phát triển game nhập vai bằng RPG Maker MV.
+          </p>
+        </section>
+
+        <section className={styles.features}>
+          <div className={styles.featureCard}>
+            <h3>⚙️ Backend & Web</h3>
+            <p>
+              Phát triển hệ thống backend với Node.js, Express, PostgreSQL, REST
+              API, và Next.js.
+            </p>
+          </div>
+          <div className={styles.featureCard}>
+            <h3>🧠 Machine Learning</h3>
+            <p>
+              Xây dựng mô hình dự đoán, phân tích dữ liệu với TensorFlow,
+              Scikit-learn, Pandas.
+            </p>
+          </div>
+          <div className={styles.featureCard}>
+            <h3>🎮 Game Development</h3>
+            <p>
+              Tạo thế giới nhập vai, thiết kế cốt truyện, và phát triển gameplay
+              bằng RPG Maker MV.
+            </p>
+          </div>
+        </section>
       </main>
     </Layout>
   );
