@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Loading...",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "My Site Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.CV & Kỹ năng": {
+    "message": "CV & Kỹ năng",
+    "description": "Navbar item with label CV & Kỹ năng"
+  },
+  "item.label.Portfolio": {
+    "message": "Portfolio",
+    "description": "Navbar item with label Portfolio"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

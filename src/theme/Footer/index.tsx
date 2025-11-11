@@ -2,6 +2,7 @@ import React from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
+import Translate from "@docusaurus/Translate";
 
 export default function Footer(): JSX.Element {
   const { colorMode } = useColorMode();
@@ -36,7 +37,7 @@ export default function Footer(): JSX.Element {
         </div>
 
         <div className={styles.middle}>
-          <h4>Liên kết</h4>
+          <h4><Translate>Link</Translate></h4>
           <ul>
             <li>
               <Link to="/">Trang chủ</Link>
@@ -54,7 +55,7 @@ export default function Footer(): JSX.Element {
         </div>
 
         <div className={styles.right}>
-          <h4>Kết nối</h4>
+          <h4><Translate>Connect</Translate></h4>
           <div className={styles.socials}>
             <a
               href="https://github.com/andq95"
